@@ -1,0 +1,374 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 9,
+    "passes": 0,
+    "pending": 0,
+    "failures": 9,
+    "start": "2021-01-27T20:33:35.776Z",
+    "end": "2021-01-27T20:33:42.141Z",
+    "duration": 6365,
+    "testsRegistered": 9,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "54bf6092-b11f-4e9e-9bee-9152bd5aadca",
+      "title": "",
+      "fullFile": "cypress/integration/explore_drinks_or_meals_spec.js",
+      "file": "cypress/integration/explore_drinks_or_meals_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a395e56d-da4c-4ad0-8012-445b92ccac20",
+          "title": "70 - Implemente os elementos da tela de explorar bebidas ou comidas respeitando os atributos descritos no protótipo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Tem os data-testids corretos para a tela de explorar comidas",
+              "fullTitle": "70 - Implemente os elementos da tela de explorar bebidas ou comidas respeitando os atributos descritos no protótipo Tem os data-testids corretos para a tela de explorar comidas",
+              "timedOut": null,
+              "duration": 723,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas');\ncy.get('[data-testid=\"explore-by-ingredient\"]');\ncy.get('[data-testid=\"explore-by-area\"]');\ncy.get('[data-testid=\"explore-surprise\"]');",
+              "err": {
+                "message": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3000/explorar/comidas\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3000\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n",
+                "estack": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3000/explorar/comidas\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3000\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n\n    at Object.cypressErr (http://localhost:35631/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:35631/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:35631/__cypress/runner/cypress_runner.js:86194:17)\n    at http://localhost:35631/__cypress/runner/cypress_runner.js:71500:31\n    at visitFailedByErr (http://localhost:35631/__cypress/runner/cypress_runner.js:71006:12)\n    at http://localhost:35631/__cypress/runner/cypress_runner.js:71499:22\n    at tryCatcher (http://localhost:35631/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:35631/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:35631/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:35631/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:35631/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:35631/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:35631/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:35631/__cypress/runner/cypress_runner.js:114812:14)",
+                "diff": null
+              },
+              "uuid": "489a6973-1b38-4efb-b940-ca15432d45e8",
+              "parentUUID": "a395e56d-da4c-4ad0-8012-445b92ccac20",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tem os data-testids corretos para a tela de explorar bebidas",
+              "fullTitle": "70 - Implemente os elementos da tela de explorar bebidas ou comidas respeitando os atributos descritos no protótipo Tem os data-testids corretos para a tela de explorar bebidas",
+              "timedOut": null,
+              "duration": 722,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/bebidas');\ncy.get('[data-testid=\"explore-by-ingredient\"]');\ncy.get('[data-testid=\"explore-by-area\"]').should('not.exist');\ncy.get('[data-testid=\"explore-surprise\"]');",
+              "err": {
+                "message": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3000/explorar/bebidas\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3000\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n",
+                "estack": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3000/explorar/bebidas\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3000\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n\n    at Object.cypressErr (http://localhost:35631/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:35631/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:35631/__cypress/runner/cypress_runner.js:86194:17)\n    at http://localhost:35631/__cypress/runner/cypress_runner.js:71500:31\n    at visitFailedByErr (http://localhost:35631/__cypress/runner/cypress_runner.js:71006:12)\n    at http://localhost:35631/__cypress/runner/cypress_runner.js:71499:22\n    at tryCatcher (http://localhost:35631/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:35631/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:35631/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:35631/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:35631/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:35631/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:35631/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:35631/__cypress/runner/cypress_runner.js:114812:14)",
+                "diff": null
+              },
+              "uuid": "b770c124-8c1f-4d7b-84d6-a63132bbc71e",
+              "parentUUID": "a395e56d-da4c-4ad0-8012-445b92ccac20",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "489a6973-1b38-4efb-b940-ca15432d45e8",
+            "b770c124-8c1f-4d7b-84d6-a63132bbc71e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1445,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "614ac463-55c1-4a9f-9923-0821b3607f6f",
+          "title": "71 - Desenvolva 3 botões: um para explorar por ingrediente, um para explorar por local de origem e um para pegar uma receita aleatória",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Tem os botões \"Por Ingredientes\", \"Por Local de Origem\" e \"Me Surpreenda!\" para a tela de explorar comidas",
+              "fullTitle": "71 - Desenvolva 3 botões: um para explorar por ingrediente, um para explorar por local de origem e um para pegar uma receita aleatória Tem os botões \"Por Ingredientes\", \"Por Local de Origem\" e \"Me Surpreenda!\" para a tela de explorar comidas",
+              "timedOut": null,
+              "duration": 692,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas');\ncy.get('[data-testid=\"explore-by-ingredient\"]').contains('Por Ingredientes');\ncy.get('[data-testid=\"explore-by-area\"]').contains('Por Local de Origem');\ncy.get('[data-testid=\"explore-surprise\"]').contains('Me Surpreenda!');",
+              "err": {
+                "message": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3000/explorar/comidas\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3000\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n",
+                "estack": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3000/explorar/comidas\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3000\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n\n    at Object.cypressErr (http://localhost:35631/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:35631/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:35631/__cypress/runner/cypress_runner.js:86194:17)\n    at http://localhost:35631/__cypress/runner/cypress_runner.js:71500:31\n    at visitFailedByErr (http://localhost:35631/__cypress/runner/cypress_runner.js:71006:12)\n    at http://localhost:35631/__cypress/runner/cypress_runner.js:71499:22\n    at tryCatcher (http://localhost:35631/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:35631/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:35631/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:35631/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:35631/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:35631/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:35631/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:35631/__cypress/runner/cypress_runner.js:114812:14)",
+                "diff": null
+              },
+              "uuid": "c54d8785-e45b-4f89-86a6-ac25f0b32f52",
+              "parentUUID": "614ac463-55c1-4a9f-9923-0821b3607f6f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tem apenas os botões \"Por Ingredientes\" e \"Me Surpreenda!\" para a tela de explorar bebidas",
+              "fullTitle": "71 - Desenvolva 3 botões: um para explorar por ingrediente, um para explorar por local de origem e um para pegar uma receita aleatória Tem apenas os botões \"Por Ingredientes\" e \"Me Surpreenda!\" para a tela de explorar bebidas",
+              "timedOut": null,
+              "duration": 640,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/bebidas');\ncy.get('[data-testid=\"explore-by-ingredient\"]').contains('Por Ingredientes');\ncy.get('[data-testid=\"explore-by-area\"]').should('not.exist');\ncy.get('[data-testid=\"explore-surprise\"]').contains('Me Surpreenda!');",
+              "err": {
+                "message": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3000/explorar/bebidas\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3000\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n",
+                "estack": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3000/explorar/bebidas\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3000\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n\n    at Object.cypressErr (http://localhost:35631/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:35631/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:35631/__cypress/runner/cypress_runner.js:86194:17)\n    at http://localhost:35631/__cypress/runner/cypress_runner.js:71500:31\n    at visitFailedByErr (http://localhost:35631/__cypress/runner/cypress_runner.js:71006:12)\n    at http://localhost:35631/__cypress/runner/cypress_runner.js:71499:22\n    at tryCatcher (http://localhost:35631/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:35631/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:35631/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:35631/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:35631/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:35631/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:35631/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:35631/__cypress/runner/cypress_runner.js:114812:14)",
+                "diff": null
+              },
+              "uuid": "185c8836-675b-4fce-881d-4805376235eb",
+              "parentUUID": "614ac463-55c1-4a9f-9923-0821b3607f6f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c54d8785-e45b-4f89-86a6-ac25f0b32f52",
+            "185c8836-675b-4fce-881d-4805376235eb"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1332,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "e9009132-f91f-4f32-a3c5-5b0957012b99",
+          "title": "72 - Redirecione a pessoa usuária ao clicar em \"Por Ingredientes\", a rota deve mudar para a tela de explorar por ingredientes",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ao clicar no botão \"Por Ingredientes\" da tela de explorar comidas a rota muda para a página de explorar comidas por ingrediente",
+              "fullTitle": "72 - Redirecione a pessoa usuária ao clicar em \"Por Ingredientes\", a rota deve mudar para a tela de explorar por ingredientes Ao clicar no botão \"Por Ingredientes\" da tela de explorar comidas a rota muda para a página de explorar comidas por ingrediente",
+              "timedOut": null,
+              "duration": 693,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas');\ncy.get('[data-testid=\"explore-by-ingredient\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/explorar/comidas/ingredientes');\n});",
+              "err": {
+                "message": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3000/explorar/comidas\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3000\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n",
+                "estack": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3000/explorar/comidas\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3000\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n\n    at Object.cypressErr (http://localhost:35631/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:35631/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:35631/__cypress/runner/cypress_runner.js:86194:17)\n    at http://localhost:35631/__cypress/runner/cypress_runner.js:71500:31\n    at visitFailedByErr (http://localhost:35631/__cypress/runner/cypress_runner.js:71006:12)\n    at http://localhost:35631/__cypress/runner/cypress_runner.js:71499:22\n    at tryCatcher (http://localhost:35631/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:35631/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:35631/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:35631/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:35631/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:35631/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:35631/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:35631/__cypress/runner/cypress_runner.js:114812:14)",
+                "diff": null
+              },
+              "uuid": "4a8f4d0f-9677-4bfe-9545-318c016c22c5",
+              "parentUUID": "e9009132-f91f-4f32-a3c5-5b0957012b99",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ao clicar no botão \"Explorar Bebidas\" da tela de explorar bebidas a rota muda para a página de explorar bebidas por ingrediente",
+              "fullTitle": "72 - Redirecione a pessoa usuária ao clicar em \"Por Ingredientes\", a rota deve mudar para a tela de explorar por ingredientes Ao clicar no botão \"Explorar Bebidas\" da tela de explorar bebidas a rota muda para a página de explorar bebidas por ingrediente",
+              "timedOut": null,
+              "duration": 677,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/bebidas');\ncy.get('[data-testid=\"explore-by-ingredient\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/explorar/bebidas/ingredientes');\n});",
+              "err": {
+                "message": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3000/explorar/bebidas\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3000\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n",
+                "estack": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3000/explorar/bebidas\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3000\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n\n    at Object.cypressErr (http://localhost:35631/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:35631/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:35631/__cypress/runner/cypress_runner.js:86194:17)\n    at http://localhost:35631/__cypress/runner/cypress_runner.js:71500:31\n    at visitFailedByErr (http://localhost:35631/__cypress/runner/cypress_runner.js:71006:12)\n    at http://localhost:35631/__cypress/runner/cypress_runner.js:71499:22\n    at tryCatcher (http://localhost:35631/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:35631/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:35631/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:35631/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:35631/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:35631/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:35631/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:35631/__cypress/runner/cypress_runner.js:114812:14)",
+                "diff": null
+              },
+              "uuid": "89db5c22-bdb4-4f78-be01-dea3f83b9427",
+              "parentUUID": "e9009132-f91f-4f32-a3c5-5b0957012b99",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4a8f4d0f-9677-4bfe-9545-318c016c22c5",
+            "89db5c22-bdb4-4f78-be01-dea3f83b9427"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1370,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "6e11163b-6a63-407a-82de-cb658e133179",
+          "title": "73 - Redirecione a pessoa usuária ao clicar em \"Por Local de Origem\", a rota deve mudar para tela de explorar por local de origem",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "A rota deve mudar para tela de explorar por local de origem",
+              "fullTitle": "73 - Redirecione a pessoa usuária ao clicar em \"Por Local de Origem\", a rota deve mudar para tela de explorar por local de origem A rota deve mudar para tela de explorar por local de origem",
+              "timedOut": null,
+              "duration": 707,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas');\ncy.get('[data-testid=\"explore-by-area\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/explorar/comidas/area');\n});",
+              "err": {
+                "message": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3000/explorar/comidas\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3000\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n",
+                "estack": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3000/explorar/comidas\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3000\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n\n    at Object.cypressErr (http://localhost:35631/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:35631/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:35631/__cypress/runner/cypress_runner.js:86194:17)\n    at http://localhost:35631/__cypress/runner/cypress_runner.js:71500:31\n    at visitFailedByErr (http://localhost:35631/__cypress/runner/cypress_runner.js:71006:12)\n    at http://localhost:35631/__cypress/runner/cypress_runner.js:71499:22\n    at tryCatcher (http://localhost:35631/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:35631/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:35631/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:35631/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:35631/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:35631/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:35631/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:35631/__cypress/runner/cypress_runner.js:114812:14)",
+                "diff": null
+              },
+              "uuid": "bebf5656-b2ad-49f9-8ae2-2d6f94065203",
+              "parentUUID": "6e11163b-6a63-407a-82de-cb658e133179",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bebf5656-b2ad-49f9-8ae2-2d6f94065203"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 707,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "10c440c9-92ec-4d4f-a26f-84cb84554366",
+          "title": "74 - Redirecione a pessoa usuária ao clicar em \"Me Surpreenda!\", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória através da API",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ao clicar no botão \"Por Ingredientes\" da tela de explorar comidas a rota muda para a página de detalhes de uma comida aleatória",
+              "fullTitle": "74 - Redirecione a pessoa usuária ao clicar em \"Me Surpreenda!\", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória através da API Ao clicar no botão \"Por Ingredientes\" da tela de explorar comidas a rota muda para a página de detalhes de uma comida aleatória",
+              "timedOut": null,
+              "duration": 693,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"explore-surprise\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/comidas/52771');\n});",
+              "err": {
+                "message": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3000/explorar/comidas\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3000\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n",
+                "estack": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3000/explorar/comidas\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3000\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n\n    at Object.cypressErr (http://localhost:35631/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:35631/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:35631/__cypress/runner/cypress_runner.js:86194:17)\n    at http://localhost:35631/__cypress/runner/cypress_runner.js:71500:31\n    at visitFailedByErr (http://localhost:35631/__cypress/runner/cypress_runner.js:71006:12)\n    at http://localhost:35631/__cypress/runner/cypress_runner.js:71499:22\n    at tryCatcher (http://localhost:35631/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:35631/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:35631/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:35631/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:35631/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:35631/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:35631/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:35631/__cypress/runner/cypress_runner.js:114812:14)",
+                "diff": null
+              },
+              "uuid": "2c030bdc-69c7-4a96-bc82-747a1a3757c6",
+              "parentUUID": "10c440c9-92ec-4d4f-a26f-84cb84554366",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ao clicar no botão \"Explorar Bebidas\" da tela de explorar bebidas a rota muda para a página de detalhes de uma bebida aleatória",
+              "fullTitle": "74 - Redirecione a pessoa usuária ao clicar em \"Me Surpreenda!\", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória através da API Ao clicar no botão \"Explorar Bebidas\" da tela de explorar bebidas a rota muda para a página de detalhes de uma bebida aleatória",
+              "timedOut": null,
+              "duration": 738,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/bebidas', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"explore-surprise\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/bebidas/178319');\n});",
+              "err": {
+                "message": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3000/explorar/bebidas\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3000\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n",
+                "estack": "CypressError: cy.visit() failed trying to load:\n\nhttp://localhost:3000/explorar/bebidas\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThe stack trace for this error is:\n\nError: connect ECONNREFUSED 127.0.0.1:3000\n    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1056:14)\n\n    at Object.cypressErr (http://localhost:35631/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:35631/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:35631/__cypress/runner/cypress_runner.js:86194:17)\n    at http://localhost:35631/__cypress/runner/cypress_runner.js:71500:31\n    at visitFailedByErr (http://localhost:35631/__cypress/runner/cypress_runner.js:71006:12)\n    at http://localhost:35631/__cypress/runner/cypress_runner.js:71499:22\n    at tryCatcher (http://localhost:35631/__cypress/runner/cypress_runner.js:120203:23)\n    at Promise._settlePromiseFromHandler (http://localhost:35631/__cypress/runner/cypress_runner.js:118139:31)\n    at Promise._settlePromise (http://localhost:35631/__cypress/runner/cypress_runner.js:118196:18)\n    at Promise._settlePromise0 (http://localhost:35631/__cypress/runner/cypress_runner.js:118241:10)\n    at Promise._settlePromises (http://localhost:35631/__cypress/runner/cypress_runner.js:118316:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:35631/__cypress/runner/cypress_runner.js:114928:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:35631/__cypress/runner/cypress_runner.js:114938:10)\n    at Async.drainQueues (http://localhost:35631/__cypress/runner/cypress_runner.js:114812:14)",
+                "diff": null
+              },
+              "uuid": "308821e9-e431-436f-942e-c4bb9911c61b",
+              "parentUUID": "10c440c9-92ec-4d4f-a26f-84cb84554366",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2c030bdc-69c7-4a96-bc82-747a1a3757c6",
+            "308821e9-e431-436f-942e-c4bb9911c61b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1431,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
