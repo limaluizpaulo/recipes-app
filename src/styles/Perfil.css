@@ -1,0 +1,21 @@
+.perfil-container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.perfil-content {
+  margin: 10%;
+  height: 100%;
+}
+
+.perfil-group-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.perfil-group-btn > button {
+  margin: 1rem;
+}

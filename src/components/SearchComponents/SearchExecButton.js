@@ -95,8 +95,9 @@ function SearchExecButton() {
       data-testid="exec-search-btn"
       onClick={ handleExecSearchButton }
       variant="secondary"
+      size="sm"
     >
-      Buscar
+      Search
     </Button>
   );
 }

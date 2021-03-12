@@ -71,6 +71,7 @@ function FavButton() {
         src={ favorite ? blackHeartIcon : whiteHeartIcon }
         alt="Favorited Icon"
         data-testid="favorite-btn"
+        className="svg-icon"
       />
     </div>
   );

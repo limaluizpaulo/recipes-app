@@ -5,14 +5,17 @@ import MealOriginButton from '../components/ExplorarComponents/MealOriginButton'
 import MealSurpriseButton from '../components/ExplorarComponents/MealSurpriseButton';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import '../styles/Explorar.css';
 
 export default function ExplorarComidas() {
   return (
-    <div>
+    <div className="explorar-container">
       <Header />
-      <MealIngredientsButton />
-      <MealOriginButton />
-      <MealSurpriseButton />
+      <div className="explorar-group-btn">
+        <MealIngredientsButton />
+        <MealOriginButton />
+        <MealSurpriseButton />
+      </div>
       <Footer />
     </div>
   );

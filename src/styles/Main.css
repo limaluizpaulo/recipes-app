@@ -1,0 +1,115 @@
+.container {
+  padding: 0;
+}
+
+.main-container {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  width: 100%;
+}
+
+header {
+  background: var(--back-light);
+  align-items:center;
+  border-bottom: 1px solid var(--text);
+  display:flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem;
+  width: 100%;
+}
+
+header > h3 {
+  left: 50%;
+  margin: 0;
+  position: absolute;
+  transform: translatex(-50%);
+  text-align: center;
+  width: 70%;
+}
+
+.categories-btns {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+}
+
+.categories-btns button {
+  font-size: small;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem;
+  width: 31%;
+}
+
+.card-deck{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.cards-container {
+  margin: 0.5rem;
+  width: 40%;
+}
+
+.card {
+  background-color: var(--background);
+  border: 1px solid var(--text);
+  width: 100%;
+}
+
+.card-body {
+  align-items: center;
+  display: flex;
+  height: 3.5rem;
+  padding: 0;
+  width: 100%;
+}
+
+.card-text {
+  line-height: 0.8rem;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+footer {
+  align-items: center;
+  background: var(--back-light);
+  border-top: 1px solid var(--text);
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 0.5rem;
+  position: sticky;
+  width: 100%;
+}
+
+.start-recipe-btn-visible {
+  background-color: var(--background);
+  width: 95%;
+  position: sticky;
+  bottom: 0;
+}
+
+.start-recipe-btn-hidden {
+  visibility: hidden;
+}
+
+.finish-recipe-btn {
+  background-color: var(--background);
+  width: 95%;
+  position: sticky;
+  bottom: 0;
+}
+
+.svg-icon {
+  filter: invert(40%) sepia(9%) saturate(10%) hue-rotate(105deg) brightness(95%) contrast(90%);
+}

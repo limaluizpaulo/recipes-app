@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  align-items: center;
+  height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  --background: #2A0A12;
+  --gray-light: #DCDDE0;
+  --text: #666666;
+  --link-hover: #424242;
+  --back-light: #3B0B17;
+  --pink: #F6CECE;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+body, input, button {
+  font: 400 1rem "Kalam", cursive;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover) ;
+  text-decoration: none;
+}
+
+.form-control {
+  background: var(--gray-light);
+}

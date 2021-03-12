@@ -2,6 +2,7 @@ import { Button, Form } from 'react-bootstrap';
 import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import RecipesContext from '../context/RecipesContext';
+import '../styles/Login.css';
 
 function Login() {
   const {
@@ -31,15 +32,15 @@ function Login() {
   };
 
   return (
-    <div className="login-content">
-      <h2 className="login-title">Login</h2>
+    <div className="login-container">
+      <h1>Recipes App</h1>
       <Form>
         <Form.Group controlId="formBasicEmail">
 
           <Form.Control
             type="email"
             data-testid="email-input"
-            placeholder="Email"
+            placeholder="E-mail"
             name="email"
             onChange={ (e) => setEmail(e.target.value) }
           />
@@ -49,7 +50,7 @@ function Login() {
           <Form.Control
             type="password"
             data-testid="password-input"
-            placeholder="Senha"
+            placeholder="Password"
             name="senha"
             onChange={ (e) => setSenha(e.target.value) }
           />
@@ -60,11 +61,11 @@ function Login() {
           data-testid="login-submit-btn"
           disabled={ isDisabled() }
           onClick={ handleEnter }
-          variant="success"
+          variant="secondary"
           size="lg"
           block
         >
-          Entrar
+          Login
         </Button>
 
       </Form>

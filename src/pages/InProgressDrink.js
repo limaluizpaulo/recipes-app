@@ -111,27 +111,27 @@ export default function InProgressDrink() {
   };
 
   return (
-    <div className="details-content">
+    <div className="detalhes-container">
       <img
         data-testid="recipe-photo"
         src={ recipe.strDrinkThumb }
         alt={ recipe.strDrink }
       />
 
-      <div className="details-header-content">
-        <div className="details-title">
-          <h2 data-testid="recipe-title">{recipe.strDrink}</h2>
+      <header>
+        <div className="detalhes-titles">
+          <h3 data-testid="recipe-title">{recipe.strDrink}</h3>
           <h4 data-testid="recipe-category">{recipe.strAlcoholic}</h4>
         </div>
         <div className="fav-share-btns">
           <ShareButton />
           <FavButton />
         </div>
-      </div>
+      </header>
 
-      <h3>Ingredientes</h3>
+      <section>
+        <h4>Ingredients</h4>
       { ingredientsList() }
-      <div className="progress-ingredients">
         <ul className="progress-ingr-list">
           {listIngredients.map((ingredient, key) => (
             <li
@@ -148,25 +148,25 @@ export default function InProgressDrink() {
             </li>
           ))}
         </ul>
-      </div>
+      </section>
 
-      <h3>Instruções</h3>
+      <section>
+        <h4>Instructions</h4>
       <span
         data-testid="instructions"
-        className="details-instructions"
       >
         {recipe.strInstructions}
       </span>
+      </section>
 
       <Button
-        variant="success"
+        variant="outline-dark"
         data-testid="finish-recipe-btn"
         className="finish-recipe-btn"
         onClick={ handleFinishRecipeBtn }
         disabled={ isDisabled() }
-        block
       >
-        Finalizar Receita
+        Finish Recipe
       </Button>
 
     </div>

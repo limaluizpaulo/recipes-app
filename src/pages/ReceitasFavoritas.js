@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import copy from 'clipboard-copy';
-import PropTypes from 'prop-types';
-import Header from '../components/Header';
-import shareIcon from '../images/shareIcon.svg';
-import favIcon from '../images/blackHeartIcon.svg';
+import React, { useEffect, useState } from "react";
+import Header from "../components/Header";
+import { Button, Card, CardDeck } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import ShareButton from "../components/DetailsComponents/ShareButton";
+import FavButton from "../components/DetailsComponents/FavButton";
+import "../styles/Fav.css";
 
-function ReceitasFavoritas(props) {
+function ReceitasFavoritas() {
   const [data, setData] = useState([]);
-  const [shared, setShared] = useState(false);
-  const { history } = props;
 
   const getData = () => {
-    const response = JSON.parse(localStorage.getItem('favoriteRecipes'));
+    const response = JSON.parse(localStorage.getItem("favoriteRecipes"));
     if (response) {
       setData(response);
     }
@@ -21,103 +20,95 @@ function ReceitasFavoritas(props) {
     getData();
   }, []);
 
-  const copyLink = (type, id) => {
-    copy(`http://localhost:3000/${type}s/${id}`);
-    setShared(true);
-  };
-
-  const removeItem = (id) => {
-    const favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
-    const response = favoriteRecipes.filter((value) => value.id !== id);
+  const removeItem = id => {
+    const favoriteRecipes = JSON.parse(localStorage.getItem("favoriteRecipes"));
+    const response = favoriteRecipes.filter(value => value.id !== id);
     setData(response);
-    localStorage.setItem('favoriteRecipes', JSON.stringify(response));
+    localStorage.setItem("favoriteRecipes", JSON.stringify(response));
   };
 
   const filterDrink = () => {
-    const favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
-    const response = favoriteRecipes.filter((value) => value.type === 'bebida');
+    const favoriteRecipes = JSON.parse(localStorage.getItem("favoriteRecipes"));
+    const response = favoriteRecipes.filter(value => value.type === "bebida");
     console.log(favoriteRecipes[0]);
     setData(response);
   };
 
   const filterFood = () => {
-    const favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
-    const response = favoriteRecipes.filter((value) => value.type === 'comida');
+    const favoriteRecipes = JSON.parse(localStorage.getItem("favoriteRecipes"));
+    const response = favoriteRecipes.filter(value => value.type === "comida");
     console.log(favoriteRecipes[0]);
     setData(response);
   };
 
   return (
-    <div>
+    <div className="main-container">
       <Header />
-      <button type="button" data-testid="filter-by-all-btn" onClick={ getData }>
-        All
-      </button>
-      <button type="button" data-testid="filter-by-food-btn" onClick={ filterFood }>
-        Food
-      </button>
-      <button type="button" data-testid="filter-by-drink-btn" onClick={ filterDrink }>
-        Drink
-      </button>
-      {data.map((value, index) => (
-        <div key={ value.id }>
-          <button
-            type="button"
-            onClick={ () => history.push(`/${value.type}s/${value.id}`) }
-          >
-            <img
-              style={ { width: '100%' } }
-              src={ value.image }
-              data-testid={ `${index}-horizontal-image` }
-              alt="Receita Favorita"
-            />
-          </button>
-          <p
-            data-testid={ `${index}-horizontal-top-text` }
-          >
-            {value.type === 'comida'
-              ? `${value.area} - ${value.category}` : value.alcoholicOrNot}
-          </p>
-          <button
-            type="button"
-            onClick={ () => history.push(`/${value.type}s/${value.id}`) }
-          >
-            <h1
-              data-testid={ `${index}-horizontal-name` }
+      <div className="categories-btns">
+        <Button
+          type="button"
+          data-testid="filter-by-all-btn"
+          onClick={getData}
+          variant="outline-dark"
+          size="sm"
+        >
+          All
+        </Button>
 
-            >
-              {value.name}
-            </h1>
-          </button>
-          {shared ? 'Link copiado!' : ''}
-          <button
-            type="button"
-            onClick={ () => copyLink(value.type, value.id) }
-          >
-            <img
-              data-testid={ `${index}-horizontal-share-btn` }
-              src={ shareIcon }
-              alt="Icon share"
-            />
-          </button>
-          <button
-            onClick={ () => removeItem(value.id) }
-            type="button"
-          >
-            <img
-              data-testid={ `${index}-horizontal-favorite-btn` }
-              src={ favIcon }
-              alt="Fav icon"
-            />
-          </button>
-        </div>
-      ))}
+        <Button
+          type="button"
+          data-testid="filter-by-food-btn"
+          onClick={filterFood}
+          variant="outline-dark"
+          size="sm"
+        >
+          Meals
+        </Button>
+
+        <Button
+          type="button"
+          data-testid="filter-by-drink-btn"
+          onClick={filterDrink}
+          variant="outline-dark"
+          size="sm"
+        >
+          Cocktails
+        </Button>
+      </div>
+
+      <CardDeck>
+        {data.map((value, index) => (
+          <div className="cards-container" key={value.id}>
+            <Card>
+              <Link to={`/${value.type}s/${value.id}`}>
+                <Card.Img
+                  variant="top"
+                  src={value.image}
+                  data-testid={`${index}-horizontal-image`}
+                  alt="Receita Favorita"
+                />
+              </Link>
+
+              <Card.Body id="fav-card-body">
+                <Card.Text data-testid={`${index}-horizontal-name`}>
+                  {value.name}
+                </Card.Text>
+                <Card.Text data-testid={`${index}-horizontal-top-text`}>
+                  {value.type === "comida"
+                    ? `${value.area} - ${value.category}`
+                    : value.alcoholicOrNot}
+                </Card.Text>
+                <div id="fav-share-btns">
+                  <ShareButton />
+                  <FavButton />
+                </div>
+              </Card.Body>
+            </Card>
+          </div>
+        ))}
+      </CardDeck>
     </div>
   );
 }
-
-ReceitasFavoritas.propTypes = {
-  history: PropTypes.objectOf().isRequired,
-};
 
 export default ReceitasFavoritas;

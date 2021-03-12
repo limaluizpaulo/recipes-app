@@ -4,13 +4,16 @@ import Header from '../components/Header';
 import DrinkSurpriseButton from '../components/ExplorarComponents/DrinkSurpriseButton';
 import DrinkIngredientsButton
   from '../components/ExplorarComponents/DrinkIngredientsButton';
+import '../styles/Explorar.css';
 
 function ExplorarBebidas() {
   return (
-    <div>
+    <div className="explorar-container">
       <Header />
-      <DrinkIngredientsButton />
-      <DrinkSurpriseButton />
+      <div className="explorar-group-btn">
+        <DrinkIngredientsButton />
+        <DrinkSurpriseButton />
+      </div>
       <Footer />
     </div>
   );

@@ -1,0 +1,25 @@
+.explorar-container {
+  align-items: center;
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.explorar-group-btn {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 10%;
+}
+
+.explorar-group-btn > button {
+  margin: 2rem;
+  padding: 1rem 2rem;
+}
+
+select {
+  background: var(--gray-light);
+  color: var(--text);
+  width: 70%;
+}

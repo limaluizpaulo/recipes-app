@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 
 export default function DrinkIngredientsButton() {
@@ -10,11 +10,14 @@ export default function DrinkIngredientsButton() {
   };
 
   return (
-    <Card
+    <Button
       data-testid="explore-by-ingredient"
       onClick={ handleExploreDrinksByIngredients }
+      type="button"
+      variant="outline-dark"
+      size="lg"
     >
-      <Card.Title>Por Ingredientes</Card.Title>
-    </Card>
+      By Ingredients
+    </Button>
   );
 }

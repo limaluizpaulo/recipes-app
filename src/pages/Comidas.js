@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import SearchResult from '../components/SearchComponents/SearchResult';
 import RecipesContext from '../context/RecipesContext';
+import '../styles/Main.css';
 
 export default function Comidas() {
   const [categories, setCategories] = useState([]);
@@ -67,50 +68,52 @@ export default function Comidas() {
       </div>
     );
   }
+
   if (filteredIngrCards.length > zero) {
     return (
-      <div>
+      <div className="main-container">
         <Header />
         <CardDeck>
           {filteredIngrCards.map((meal, index) => (
-            <Link
-              key={ index }
-              to={ `/comidas/${meal.idMeal}` }
-            >
-              <Card
-                data-testid={ `${index}-recipe-card` }
+            <div className="cards-container" key={ index }>
+              <Link
+                to={ `/comidas/${meal.idMeal}` }
               >
-                <Card.Img
-                  variant="top"
-                  src={ meal.strMealThumb }
-                  data-testid={ `${index}-card-img` }
-                />
-                <Card.Body>
-                  <Card.Title
-                    data-testid={ `${index}-card-name` }
-                  >
-                    { meal.strMeal }
-                  </Card.Title>
-                </Card.Body>
-              </Card>
-            </Link>
+                <Card
+                  data-testid={ `${index}-recipe-card` }
+                >
+                  <Card.Img
+                    variant="top"
+                    src={ meal.strMealThumb }
+                    data-testid={ `${index}-card-img` }
+                  />
+                  <Card.Body>
+                    <Card.Text
+                      data-testid={ `${index}-card-name` }
+                    >
+                      { meal.strMeal }
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Link>
+            </div>
           ))}
         </CardDeck>
-
         <Footer />
       </div>
     );
   }
 
   return (
-    <div>
+    <div className="main-container">
       <Header />
       <div className="categories-btns">
         <Button
           type="button"
           data-testid="All-category-filter"
           onClick={ () => getCards() }
-          variant="secondary"
+          variant="outline-dark"
+          size="sm"
         >
           All
         </Button>
@@ -122,17 +125,18 @@ export default function Comidas() {
             data-testid={ `${category}-category-filter` }
             value={ category }
             onClick={ (event) => filterByCategory(event) }
-            variant="secondary"
+            variant="outline-dark"
+            size="sm"
           >
             {category}
           </Button>
         ))}
       </div>
-      <div>
-        <CardDeck>
-          {cards.map((card, index) => (
+      
+      <CardDeck>
+        {cards.map((card, index) => (
+          <div className="cards-container" key={ index }>
             <Link
-              key={ index }
               to={ `/comidas/${card.idMeal}` }
             >
               <Card
@@ -144,17 +148,17 @@ export default function Comidas() {
                   data-testid={ `${index}-card-img` }
                 />
                 <Card.Body>
-                  <Card.Title
+                  <Card.Text
                     data-testid={ `${index}-card-name` }
                   >
                     { card.strMeal }
-                  </Card.Title>
+                  </Card.Text>
                 </Card.Body>
               </Card>
             </Link>
-          ))}
-        </CardDeck>
-      </div>
+          </div>
+        ))}
+      </CardDeck>
       <Footer />
     </div>
   );

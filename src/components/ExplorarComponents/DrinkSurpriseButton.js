@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { Card } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import RecipesContext from '../../context/RecipesContext';
 import { fetchDrinkSurprise } from '../../services/api';
@@ -29,12 +29,15 @@ export default function DrinkSurpriseButton() {
   };
 
   return (
-    <Card
+    <Button
       data-testid="explore-surprise"
       onClick={ handleExploreSurprise }
+      type="button"
+      variant="outline-dark"
+      size="lg"
     >
-      <Card.Title>Me Surpreenda!</Card.Title>
-    </Card>
+      Surprise me!
+    </Button>
 
   );
 }

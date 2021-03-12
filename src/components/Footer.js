@@ -20,9 +20,8 @@ function Footer() {
   };
 
   return (
-    <footer className="footer" data-testid="footer">
+    <footer data-testid="footer">
       <div
-        className="icon"
         role="button"
         tabIndex={ 0 }
         onKeyPress={ () => {} }
@@ -32,6 +31,7 @@ function Footer() {
           src={ drinkIcon }
           alt="drink-icon"
           data-testid="drinks-bottom-btn"
+          className="svg-icon"
         />
       </div>
 
@@ -46,11 +46,11 @@ function Footer() {
           src={ exploreIcon }
           alt="explore-icon"
           data-testid="explore-bottom-btn"
+          className="svg-icon"
         />
       </div>
 
       <div
-        className="icon"
         role="button"
         tabIndex={ 0 }
         onKeyPress={ () => {} }
@@ -60,6 +60,7 @@ function Footer() {
           src={ mealIcon }
           alt="meal-icon"
           data-testid="food-bottom-btn"
+          className="svg-icon"
         />
       </div>
     </footer>

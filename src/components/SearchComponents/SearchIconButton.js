@@ -25,6 +25,7 @@ function SearchButton() {
         src={ searchIcon }
         alt="search-icon"
         data-testid="search-top-btn"
+        className="svg-icon"
       />
     </div>
   );

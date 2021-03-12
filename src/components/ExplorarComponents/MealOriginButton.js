@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 
 export default function MealOriginButton() {
@@ -9,11 +9,14 @@ export default function MealOriginButton() {
   };
 
   return (
-    <Card
+    <Button
       data-testid="explore-by-area"
       onClick={ handleExploreByArea }
+      type="button"
+      variant="outline-dark"
+      size="lg"
     >
-      <Card.Title>Por Local de Origem</Card.Title>
-    </Card>
+      By Area
+    </Button>
   );
 }

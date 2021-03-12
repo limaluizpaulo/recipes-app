@@ -25,40 +25,39 @@ function Header() {
     case '/':
       return setTitle('Login');
     case '/comidas':
-      return setTitle('Comidas');
+      return setTitle('Meals');
     case '/bebidas':
-      return setTitle('Bebidas');
+      return setTitle('Cocktails');
     case '/explorar':
-      return setTitle('Explorar');
+      return setTitle('Explore');
     case '/explorar/comidas':
-      return setTitle('Explorar Comidas');
+      return setTitle('Explore Meals');
     case '/explorar/bebidas':
-      return setTitle('Explorar Bebidas');
+      return setTitle('Explore Cocktails');
     case '/explorar/comidas/ingredientes':
-      return setTitle('Explorar Ingredientes');
+      return setTitle('Explore Ingredients');
     case '/explorar/bebidas/ingredientes':
-      return setTitle('Explorar Ingredientes');
+      return setTitle('Explore Ingredients');
     case '/explorar/comidas/area':
-      return setTitle('Explorar Origem');
+      return setTitle('Explore Area');
     case '/perfil':
-      return setTitle('Perfil');
+      return setTitle('Profile');
     case '/receitas-feitas':
-      return setTitle('Receitas Feitas');
+      return setTitle('Done Recipes');
     case '/receitas-favoritas':
-      return setTitle('Receitas Favoritas');
+      return setTitle('Favorite Recipes');
     default:
       return setTitle('');
     }
   }, [pathname, setTitle]);
 
-  if (title === 'Comidas'
-    || title === 'Bebidas'
-    || title === 'Explorar Origem') {
+  if (title === 'Meals'
+    || title === 'Cocktails'
+    || title === 'Explore Area') {
     return (
-      <div>
+      <div className="header-container">
         <header>
           <div
-            className="icon"
             role="button"
             tabIndex={ 0 }
             onKeyPress={ () => {} }
@@ -68,9 +67,10 @@ function Header() {
               data-testid="profile-top-btn"
               src={ profileIcon }
               alt="profile-icon"
+              className="svg-icon"
             />
           </div>
-          <h2 data-testid="page-title">{ title }</h2>
+          <h3 data-testid="page-title">{ title }</h3>
           <SearchIconButton />
         </header>
         { searching && <SearchBar /> }
@@ -81,7 +81,6 @@ function Header() {
   return (
     <header>
       <div
-        className="icon"
         role="button"
         tabIndex={ 0 }
         onKeyPress={ () => {} }
@@ -91,9 +90,10 @@ function Header() {
           data-testid="profile-top-btn"
           src={ profileIcon }
           alt="profile-icon"
+          className="svg-icon"
         />
       </div>
-      <h2 data-testid="page-title">{ title }</h2>
+      <h3 data-testid="page-title">{ title }</h3>
     </header>
   );
 }

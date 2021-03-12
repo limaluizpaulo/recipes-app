@@ -3,6 +3,7 @@ import { Form } from 'react-bootstrap';
 import RecipesContext from '../../context/RecipesContext';
 import SearchExecButton from './SearchExecButton';
 import SearchResult from './SearchResult';
+import '../../styles/Search.css';
 
 function SearchBar() {
   const {
@@ -11,15 +12,16 @@ function SearchBar() {
   } = useContext(RecipesContext);
 
   return (
-    <div>
-      <Form className="search-bar-form">
+    <div className="searchbar-container">
+      <Form>
         <Form.Group controlId="inputSearch">
           <Form.Control
             type="text"
             data-testid="search-input"
-            placeholder="Buscar Receita"
+            placeholder="Search Recipe"
             name="search"
             onChange={ (e) => setInputSearch(e.target.value) }
+            size="sm"
           />
         </Form.Group>
         <Form.Group controlId="formBasicCheckbox">
@@ -27,7 +29,7 @@ function SearchBar() {
             <Form.Check
               inline
               name="radio"
-              label="Ingrediente"
+              label="Ingredient"
               data-testid="ingredient-search-radio"
               type="radio"
               id="inline-radio-ingrediente"
@@ -37,7 +39,7 @@ function SearchBar() {
             <Form.Check
               inline
               name="radio"
-              label="Nome"
+              label="Name"
               data-testid="name-search-radio"
               type="radio"
               id="inline-radio-nome"
@@ -47,7 +49,7 @@ function SearchBar() {
             <Form.Check
               inline
               name="radio"
-              label="Primeira letra"
+              label="First Letter"
               data-testid="first-letter-search-radio"
               type="radio"
               id="inline-radio-primeira-letra"

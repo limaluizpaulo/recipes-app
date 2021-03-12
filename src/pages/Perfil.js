@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import '../styles/Perfil.css';
 
 function Perfil() {
   const userStorage = JSON.parse(localStorage.getItem('user'));
@@ -24,37 +25,42 @@ function Perfil() {
   };
 
   return (
-    <div>
+    <div className="perfil-container">
       <Header />
-      <h3 data-testid="profile-email">{ emailStorage }</h3>
+      <div className="perfil-content">
+        <h3 data-testid="profile-email">{ emailStorage }</h3>
+        <div className="perfil-group-btn">
+          <Button
+            type="button"
+            data-testid="profile-done-btn"
+            variant="outline-dark"
+            onClick={ handleDone }
+            size="lg"
+          >
+            Done Recipes
+          </Button>
 
-      <Button
-        type="button"
-        data-testid="profile-done-btn"
-        variant="secondary"
-        onClick={ handleDone }
-      >
-        Receitas Feitas
-      </Button>
+          <Button
+            type="button"
+            data-testid="profile-favorite-btn"
+            variant="outline-dark"
+            onClick={ handleFav }
+            size="lg"
+          >
+            Favorite Recipes
+          </Button>
 
-      <Button
-        type="button"
-        data-testid="profile-favorite-btn"
-        variant="secondary"
-        onClick={ handleFav }
-      >
-        Receitas Favoritas
-      </Button>
-
-      <Button
-        type="button"
-        data-testid="profile-logout-btn"
-        onClick={ handleExit }
-        variant="secondary"
-      >
-        Sair
-      </Button>
-
+          <Button
+            type="button"
+            data-testid="profile-logout-btn"
+            onClick={ handleExit }
+            variant="outline-dark"
+            size="lg"
+          >
+            Logout
+          </Button>
+        </div>
+      </div>
       <Footer />
     </div>
 

@@ -5,7 +5,7 @@ import RecipesContext from '../../context/RecipesContext';
 
 function StartButton() {
   const [showBtn, setShowBtn] = useState(true);
-  const [btnText, setBtnText] = useState('Iniciar Receita');
+  const [btnText, setBtnText] = useState('Start Recipe');
   const [id, setId] = useState('');
   const [redirect, setRedirect] = useState('');
 
@@ -36,8 +36,8 @@ function StartButton() {
       const dataIds = path.includes('comidas') ? Object.keys(dataProgress.meals)
         : Object.keys(dataProgress.cocktails);
       const isInProgress = dataIds.some((item) => item === id);
-      return isInProgress ? setBtnText('Continuar Receita')
-        : setBtnText('Iniciar Receita');
+      return isInProgress ? setBtnText('Continue Recipe')
+        : setBtnText('Start Recipe');
     }
   }, [id, path]);
 
@@ -49,7 +49,7 @@ function StartButton() {
 
   return (
     <Button
-      variant="success"
+      variant="outline-dark"
       data-testid="start-recipe-btn"
       className={ showBtn ? 'start-recipe-btn-visible' : 'start-recipe-btn-hidden' }
       onClick={ handleStartRecipeClick }

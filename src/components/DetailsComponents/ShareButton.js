@@ -44,6 +44,7 @@ function ShareButton() {
           src={ shareIcon }
           alt="Share Icon"
           data-testid="share-btn"
+          className="svg-icon"
         />
       </div>
 
@@ -55,7 +56,7 @@ function ShareButton() {
       >
         <Modal.Header closeButton>
           <Modal.Title id="example-modal-sizes-title-sm">
-            Link copiado!
+            Link was copied!
           </Modal.Title>
         </Modal.Header>
       </Modal>
